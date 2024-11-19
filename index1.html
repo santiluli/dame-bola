@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me estás amando?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f1c3;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            position: absolute;
+            z-index: 10;
+            font-size: 4rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://i.imgur.com/MbT50XN.png'); /* Flor amarilla */
+            background-size: cover;
+            animation: float 10s infinite;
+            z-index: 5;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        .photo {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            border-radius: 10px;
+            animation: floatPhoto 12s infinite;
+            z-index: 6;
+        }
+
+        @keyframes floatPhoto {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Me estás amando?</h1>
+
+    <!-- Flores amarillas -->
+    <div class="flower" style="top: 10%; left: 20%;"></div>
+    <div class="flower" style="top: 15%; left: 70%;"></div>
+    <div class="flower" style="top: 50%; left: 40%;"></div>
+    <div class="flower" style="top: 80%; left: 10%;"></div>
+    <div class="flower" style="top: 75%; left: 85%;"></div>
+
+    <!-- Fotos de Charly García -->
+    <div class="photo" style="top: 20%; left: 30%; background-image: url('https://i.imgur.com/U7nU3hJ.jpeg');"></div>
+    <div class="photo" style="top: 50%; left: 60%; background-image: url('https://i.imgur.com/bYbO1dC.jpeg');"></div>
+    <div class="photo" style="top: 70%; left: 15%; background-image: url('https://i.imgur.com/Fwe7kUd.jpeg');"></div>
+</body>
+</html>
